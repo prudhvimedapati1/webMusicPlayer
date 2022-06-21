@@ -20,7 +20,8 @@ const makeAllPlays=()=>{
     element.classList.add("fa-play")
 })
 }
-document.getElementByClassName("home").addEventListener("click",reload());
+ 
+ 
 Array.from(document.getElementsByClassName("songItem")).forEach((element, i)=>{
     element.getElementsByTagName("h3")[0].innerHTML=songs[i].songName
     element.getElementsByTagName("p")[0].innerHTML=songs[i].songAuthor
