@@ -83,7 +83,13 @@ Array.from(document.getElementsByClassName("songItemPlay")).forEach((element)=>{
 })
 document.getElementById("back").addEventListener("click",()=>{
     makeAllPlays();
-    songId=songId-1;
+    if(songId==1){
+        songId=10;
+    }
+    else{
+        songId=songId-1;
+    }
+    
     currentSong.src="songs/"+songId+".mp3";
     masterPlay.classList.remove("fa-play");
     masterPlay.classList.add("fa-pause");
@@ -99,7 +105,13 @@ document.getElementById("back").addEventListener("click",()=>{
 })
 document.getElementById("forward").addEventListener("click",()=>{
     makeAllPlays();
-    songId=songId+1;
+    if(songId==10){
+        songId=1;
+    }
+    else{
+        songId=songId+1;
+    }
+    
     currentSong.src="songs/"+songId+".mp3";
     masterPlay.classList.remove("fa-play");
     masterPlay.classList.add("fa-pause");
